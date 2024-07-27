@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green">#006769</color>
+    <color name="dongker">#134B70</color>
+    <color name="gold">#F9D689</color>
+    <color name="red">#C40C0C</color>
+    <color name="cream">#FFEEA9</color>
+    <color name="light_cream">#FFFBDA</color>
+    <color name="dark_grey">#758694</color>
+    <color name="light_grey">#F5F7F8</color>
+    <color name="dark_blue">#153448</color>
+</resources>
