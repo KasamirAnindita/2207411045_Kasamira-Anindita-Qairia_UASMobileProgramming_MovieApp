@@ -33,7 +33,7 @@ public class DetailActivity extends AppCompatActivity {
         });
 
 
-        Film item = (Film) getIntent().getSerializableExtra("FILM_DETAILS"); // Use the constant key
+        Film item = (Film) getIntent().getSerializableExtra("FILM_DETAILS");
         if (item != null) {
             setVariable(item);
         } else {
@@ -44,7 +44,7 @@ public class DetailActivity extends AppCompatActivity {
     private void setVariable(Film item) {
         // Set variables for the film details as before
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions = requestOptions.transform(new CenterCrop());
+        requestOptions = requestOptions.transform(new CenterCrop(), new GranularRoundedCorners(0, 0, 20,20));
 
         Glide.with(this)
                 .load(item.getPoster())

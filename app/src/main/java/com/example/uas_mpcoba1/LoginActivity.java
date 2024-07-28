@@ -36,51 +36,5 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 }
-//
-//        binding.btnLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                user = binding.txtUsername.getText().toString();
-//                pass = binding.txtPassword.getText().toString();
-//                Log.d("LoginProcess", "Username: " + user + ", Password: " + pass);
-//
-//                if (user.isEmpty()) {
-//                    binding.txtUsername.setError("Username tidak boleh kosong!");
-//                } else if (pass.isEmpty()) {
-//                    binding.txtPassword.setError("Password tidak boleh kosong!");
-//                } else {
-//                    binding.loading.setVisibility(View.VISIBLE);
-//                    getData();
-//                }
-//            }
-//        });
-//    }
-//
-//    private void getData() {
-//        RetrofitClient api = (RetrofitClient) RetrofitClient.getInstance();
-//        ((ApiClient) api).login(user, pass).enqueue(new Callback<ResponseLogin>() {
-//            @Override
-//            public void onResponse(Call<ResponseLogin> call, Response<ResponseLogin> response) {
-//                binding.loading.setVisibility(View.GONE);
-//                if (response.isSuccessful() && response.body() != null) {
-//                    Log.d("LoginResponse", "Response: " + response.body());
-//                    if (response.body().getResponse()) {
-//                        startActivity(new Intent(LoginActivity.this, MainActivity.class));
-//                        finish();
-//                    } else {
-//                        Toast.makeText(LoginActivity.this, "Login gagal. Periksa kembali username dan password", Toast.LENGTH_LONG).show();
-//                    }
-//                } else {
-//                    Toast.makeText(LoginActivity.this, "Login gagal, terjadi kesalahan: " + response.code(), Toast.LENGTH_LONG).show();
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<ResponseLogin> call, Throwable t) {
-//                binding.loading.setVisibility(View.GONE);
-//                Toast.makeText(LoginActivity.this, "Login gagal, terjadi kesalahan: " + t.getMessage(), Toast.LENGTH_LONG).show();
-//                Log.e("Pesan error", t.getMessage());
-//            }
-//        });
-//    }
+
 

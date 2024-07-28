@@ -67,7 +67,6 @@ public class CinemaMapsActivity extends AppCompatActivity implements OnMapReadyC
         mMap.addMarker(new MarkerOptions().position(cinemaLocation).title("Cinema Location"));
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(cinemaLocation, 15));
 
-        // Get address from coordinates
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         try {
             List<Address> addresses = geocoder.getFromLocation(cinemaLocation.latitude, cinemaLocation.longitude, 1);

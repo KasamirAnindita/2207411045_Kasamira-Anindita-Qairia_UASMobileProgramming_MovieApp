@@ -46,7 +46,7 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.ViewHolder> {
         holder.titleTxt.setText(film.getTitle());
 
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions = requestOptions.transform(new CenterCrop());
+        requestOptions = requestOptions.transform(new CenterCrop(), new RoundedCorners(20));
 
         Glide.with(context)
                 .load(film.getPoster())

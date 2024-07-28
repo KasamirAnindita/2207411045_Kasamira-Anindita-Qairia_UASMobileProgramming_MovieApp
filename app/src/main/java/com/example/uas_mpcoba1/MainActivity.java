@@ -28,14 +28,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     private FirebaseDatabase database;
-    private Handler sliderHandler = new Handler(Looper.getMainLooper());
-    private Runnable sliderRunnable = new Runnable() {
-        @Override
-        public void run() {
-            int currentItem = ((LinearLayoutManager) binding.view0.getLayoutManager()).findFirstVisibleItemPosition();
-            binding.view0.smoothScrollToPosition(currentItem + 1);
-        }
-    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +60,6 @@ public class MainActivity extends AppCompatActivity {
         binding.loading0.setVisibility(View.VISIBLE);
         ArrayList<Film> items = new ArrayList<>();
 
-        RecyclerView view0 = binding.view0;
-        view0.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
-            startActivity(intent);
-        });
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
