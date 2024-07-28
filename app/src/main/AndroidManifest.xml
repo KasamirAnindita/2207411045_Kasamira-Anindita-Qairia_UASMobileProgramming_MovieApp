@@ -37,15 +37,22 @@
             android:exported="false"
             android:label="@string/title_activity_cinema_maps" />
         <activity
-            android:name=".CinemaLocation"
-            android:exported="false" />
+            android:name=".DetailActivity"/>
+
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
 

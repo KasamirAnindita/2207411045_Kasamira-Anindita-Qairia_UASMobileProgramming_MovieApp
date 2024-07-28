@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
@@ -30,62 +30,62 @@
             android:textStyle="bold"
             android:textColor="@color/black"/>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            style="@style/CustomTextInputLayout">
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            style="@style/CustomTextInputLayout">-->
 
 
-            <EditText
-                android:id="@+id/txtUsername"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="12sp"
-                android:inputType="text"
-                android:maxLines="1"
-                android:hint="Masukkan Username"/>
+<!--            <EditText-->
+<!--                android:id="@+id/txtUsername"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:textSize="12sp"-->
+<!--                android:inputType="text"-->
+<!--                android:maxLines="1"-->
+<!--                android:hint="Masukkan Username"/>-->
 
-        </com.google.android.material.textfield.TextInputLayout>
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            style="@style/CustomTextInputLayout"
-            >
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            style="@style/CustomTextInputLayout"-->
+<!--            >-->
 
-            <EditText
-                android:id="@+id/txtPassword"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:textSize="12sp"
-                android:inputType="textPassword"
-                android:maxLines="1"
-                android:hint="Masukkan Password"/>
-        </com.google.android.material.textfield.TextInputLayout>
+<!--            <EditText-->
+<!--                android:id="@+id/txtPassword"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:textSize="12sp"-->
+<!--                android:inputType="textPassword"-->
+<!--                android:maxLines="1"-->
+<!--                android:hint="Masukkan Password"/>-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@drawable/button_style"
-            android:text="Login"
-            android:backgroundTint="@color/green"
-            android:textColor="@color/gold"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp"/>
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnLogin"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@drawable/button_style"-->
+<!--            android:text="Login"-->
+<!--            android:backgroundTint="@color/green"-->
+<!--            android:textColor="@color/gold"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="40dp"/>-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnmasuk"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="@drawable/button_style"
-            android:text="gas masuk"
+            android:text="Login as Guest"
             android:backgroundTint="@color/green"
-            android:textColor="@color/gold"
+            android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_gravity="center"

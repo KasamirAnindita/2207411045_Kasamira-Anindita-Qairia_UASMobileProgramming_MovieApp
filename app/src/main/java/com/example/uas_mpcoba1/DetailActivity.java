@@ -1,8 +1,11 @@
 package com.example.uas_mpcoba1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -23,14 +26,25 @@ public class DetailActivity extends AppCompatActivity {
         binding = ActivityDetailBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setVariable();
+        ImageView btnBackDetail = binding.btnBackDetail;
+        btnBackDetail.setOnClickListener(v -> {
+            Intent intent = new Intent(DetailActivity.this, MainActivity.class);
+            startActivity(intent);
+        });
 
+
+        Film item = (Film) getIntent().getSerializableExtra("FILM_DETAILS"); // Use the constant key
+        if (item != null) {
+            setVariable(item);
+        } else {
+
+        }
     }
 
-    private void setVariable(){
-        Film item = (Film) getIntent().getSerializableExtra("object");
+    private void setVariable(Film item) {
+        // Set variables for the film details as before
         RequestOptions requestOptions = new RequestOptions();
-        requestOptions = requestOptions.transform(new CenterCrop(), new GranularRoundedCorners(0, 0, 50, 50));
+        requestOptions = requestOptions.transform(new CenterCrop());
 
         Glide.with(this)
                 .load(item.getPoster())
@@ -41,15 +55,12 @@ public class DetailActivity extends AppCompatActivity {
                 .apply(requestOptions)
                 .into(binding.posterBigImg);
 
-                binding.movieTitle.setText((item.getTitle()));
-                binding.movieRate.setText(("Rating" + item.getImdb()));
-                binding.movieDuration.setText(item.getTime());
-                binding.dateMovie.setText(item.getYear());
-                binding.moviesSummary.setText(item.getDescription());
-                binding.posterNormalImg.setOnClickListener(v -> finish());
-
-//                float radius = 10f;
-//                View decorView = getWindow().getDecorView();
-//        ViewGroup rootView = (ViewGroup)  decorView.findViewById()
+        binding.movieTitle.setText(item.getTitle());
+        binding.movieRate.setText("Rating: " + item.getImdb());
+        binding.movieDuration.setText(item.getTime());
+        binding.dateMovie.setText(String.valueOf(item.getYear()));
+        binding.moviesSummary.setText(item.getDescription());
+        binding.posterNormalImg.setOnClickListener(v -> finish());
     }
 }
+

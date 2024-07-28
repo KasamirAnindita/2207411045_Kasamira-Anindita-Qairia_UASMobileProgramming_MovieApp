@@ -12,6 +12,11 @@ public class Film implements Serializable {
     private Double Imdb;
     private ArrayList<Cast> Casts;
 
+    public Film() {
+
+
+    }
+
     public String getTitle() {
         return Title;
     }
@@ -68,13 +73,8 @@ public class Film implements Serializable {
         Casts = casts;
     }
 
-    // Default constructor
-    public Film() {
 
-
-    }
 }
 
-    // Getters and Setters
 
 

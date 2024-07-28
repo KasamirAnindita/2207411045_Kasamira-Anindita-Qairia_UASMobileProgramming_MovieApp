@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.uas_mpcoba1.Adapter.FilmAdapter;
 import com.example.uas_mpcoba1.Domain.Film;
@@ -43,12 +44,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         ImageButton btnLocation = binding.btnLocation;
-        btnLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, CinemaMapsActivity.class);
-                startActivity(intent);
-            }
+        btnLocation.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, CinemaMapsActivity.class);
+            startActivity(intent);
         });
 
         database = FirebaseDatabase.getInstance();
@@ -68,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
         DatabaseReference myRef = database.getReference("Items");
         binding.loading0.setVisibility(View.VISIBLE);
         ArrayList<Film> items = new ArrayList<>();
+
+        RecyclerView view0 = binding.view0;
+        view0.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, DetailActivity.class);
+            startActivity(intent);
+        });
         myRef.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

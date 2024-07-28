@@ -218,7 +218,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.2"
                     android:backgroundTint="@color/white"
-                    app:srcCompat="@drawable/outline_explore"
+                    app:srcCompat="@drawable/baseline_myticket"
                     app:tint="@color/white" />
 
                 <ImageView
@@ -260,7 +260,7 @@
                     android:layout_margin="5dp"
                     android:layout_weight="0.2"
                     android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/baseline_myticket"
+                    app:srcCompat="@drawable/outline_explore"
                     app:tint="@color/white" />
             </LinearLayout>
 
